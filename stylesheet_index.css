@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+.font_1 {
+  font-family: "Anton", sans-serif;
+}
+.font_size_nag {
+  font-size: 180px;
+}
+.font_size_middle {
+  font-size: 100px;
+}
+.start-image {
+  position: relative;
+  height: 800px;
+  width: 100%;
+}
+.img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 1;
+}
+.nag {
+  color: white !important;
+  position: absolute;
+  text-decoration: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+/* -------------------------------------------------------------------- */
+.middle-bar {
+  border-top: 2px solid white;
+  display: grid;
+  width: 100%;
+  height: 300px;
+  background-color: rgb(228, 228, 228);
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "buy rent here";
+}
+.rent {
+  border-left: 15px solid white;
+  border-right: 15px solid white;
+}
+.nag_middle {
+  position: relative;
+  top: 35%;
+  left: 35%;
+  transform: translate(-35%, -35%);
+  text-align: center;
+}
+.middle_link {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: 2;
+  color: white !important;
+  text-decoration: none;
+  vertical-align: middle;
+  line-height: 300px;
+}
+.overlay_up {
+  position: relative;
+  overflow: hidden;
+}
+.overlay_up:after {
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top center;
+  background: rgb(177, 115, 0); 
+  /* background: rgb(43, 43, 43); */
+  filter: opacity(0.5);
+  transition: transform 0.3s;
+}
+.overlay_up:hover::after {
+  transform: scaleY(1);
+}
+/* ---------------------------------------------------------------------------- */
+
+#car-list-container {
+  background-color: rgb(39, 38, 38);
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.car-list-item {
+  background-color: rgb(167, 115, 18);
+  width: 280px;
+  height: 250px;
+  margin: 15px;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 10px 10px 0px -6px rgba(255,255,255,1);
+  cursor: pointer;
+  position: relative;
+}
+.list-img {
+  position: relative;
+  height: 85%;
+  width: 100%;
+}
+.paragraph {
+  border-top: 3px solid white;
+  position: relative;
+  color: white;
+  font-size: 35px;
+  text-align: right;
+  cursor: default;
+  top: 77.5%;
+  background-color: rgb(167, 115, 18);
+}
+.overlay_down {
+  overflow: hidden;
+}
+.overlay_down:after {
+  left: 0;
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  background: rgb(177, 115, 0);
+  filter: opacity(0.5);
+  transition: transform 0.3s;
+}
+.overlay_down:hover::after {
+  transform: scaleY(1);
+}
+.overlay_down .button {
+  display: none;
+  position: absolute;
+  top: 85px;
+  left: 30px;
+  z-index: 3;
+  box-sizing: border-box;
+  height: 40px;
+  width: 70px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+}
+
+.carImageCover {
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.overlay_down:hover .button {
+  display: inline-block;
+  transition-delay: inherit;
+}
+.overlay_down .button.delete {
+  left: 185px;
+}
+.edit {
+  background-color: rgb(255, 166, 0);
+}
+.delete {
+  background-color: red;
+}
+/* ----------------------------------------------------------------- */
+.footer {
+  width: 100%;
+  height: 55px;
+  background-color: black;
+}

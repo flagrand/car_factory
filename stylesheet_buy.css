@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: rgb(39, 38, 38);
+  overflow: hidden;
+}
+.main {
+  margin: 30px;
+  width: 700px;
+  height: 100%;
+}
+.font_1 {
+  font-family: "Anton", sans-serif;
+  color: white;
+}
+.engine {
+  position: relative;
+  width: 100%;
+}
+.engine-img {
+  position: relative;
+  height: 200px;
+  width: 1000px;
+}
+#validateModel {
+  color: red;
+}
+.button {
+  width: 100px;
+  height: 50px;
+  background-color: orange;
+  border: none;
+  border-radius: 25px;
+  font-size: 25px;
+}
+#main-content {
+  float: left;
+  width: 40%;
+  border-right: solid 5px #fff;
+  height: 100vh;
+}
+body > img {
+  margin-top: 20px;
+  float: left;
+  margin-left: 20px;
+  height: 90%;
+  max-width: calc (100% - 50px);
+  max-height: 95vh;
+}
+@media screen and (max-width: 1000px) {
+  #main-content {
+    font-size: 40px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 50%;
+  }
+  img {
+    visibility: hidden;
+  }
+}
+@media screen and (max-width: 400px) {
+  #main-content {
+    font-size: 40px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 50%;
+    margin-left: 20%;
+  }
+  .button {
+    width: 200px;
+    height: 150px;
+    background-color: orange;
+    border: none;
+    border-radius: 25px;
+    font-size: 60px;
+  }
+  img {
+    visibility: hidden;
+  }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="stylesheet_buy.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Buy</title>
+  </head>
+  <body>
+    <div class="main" id="main-content">
+      <input type="hidden" name="brand" />
+
+      <div class="model font_1">
+        <img src="" alt="" />
+        <p>Model:</p>
+        <input type="text" id="model" maxlength="10" />
+        <p id="validateModel"></p>
+      </div><br><br>
+
+      <div class="color font_1">
+        <p>Color:</p>
+        <select name="color" id="color">
+          <option v-for="(color, index) in colorArray" :value="index">{{
+            color.colorName
+          }}</option>
+        </select>
+      </div>
+      <br /><br>
+      <div class="engine font_1">
+        <p>Engine:</p><br>
+        <input type="radio" name="fuel" id="petrol" checked value="PETROL" />
+        <label for="petrol">Petrol</label>
+        &nbsp&nbsp&nbsp&nbsp
+        <input type="radio" name="fuel" id="diesel" value="DIESEL" />
+        <label for="diesel">Diesel</label>
+        &nbsp&nbsp&nbsp&nbsp
+        <input type="radio" name="fuel" id="hybrid" value="HYBRID" />
+        <label for="hybrid">Hybrid</label>
+        &nbsp&nbsp&nbsp&nbsp
+        <input type="radio" name="fuel" id="electric" value="ELECTRIC" />
+        <label for="electric">Electric</label>
+      </div>
+      <br /><br>
+      <button class="button font_1" type="button" onclick="send()">Create</button>
+    </div>
+    <img src="./img/buy/create.jpg" alt="">
+    <script src="./buy.js"></script>
+  </body>
+</html>

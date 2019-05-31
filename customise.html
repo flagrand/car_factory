@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="stylesheet.customise.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Customise</title>
+  </head>
+  <body>
+    <div id="main-content">
+      <div class="model font_1">
+        <p>Model:</p>
+        <input type="text" id="model" maxlength="10" /><br /><br />
+        <p id="validateModel"></p>
+      </div>
+      <div class="color font_1">
+        <p>Color:</p>
+        <select name="color" id="color">
+          <option v-for="(color, index) in colorArray" :value="index">{{
+            color.colorName
+          }}</option>
+        </select>
+      </div>
+      <div class="engine font_1">
+        <p>Engine:</p>
+        <input type="radio" name="fuel" id="petrol" value="PETROL" />
+        <label for="petrol">Petrol</label>
+        &nbsp&nbsp&nbsp&nbsp
+        <input type="radio" name="fuel" id="diesel" value="DIESEL" />
+        <label for="diesel">Diesel</label>
+        &nbsp&nbsp&nbsp&nbsp
+        <input type="radio" name="fuel" id="hybrid" value="HYBRID" />
+        <label for="hybrid">Hybrid</label>
+        &nbsp&nbsp&nbsp&nbsp
+        <input type="radio" name="fuel" id="electric" value="ELECTRIC" />
+        <label for="electric">Electric</label>
+      </div>
+      <br />
+      <button class="button font_1" type="button" onclick="send()">Edit</button>
+    </div>
+    <img src="./img/buy/wrench.jpg" alt="">
+    <script src="./customise.js"></script>
+  </body>
+</html>

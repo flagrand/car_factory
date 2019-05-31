@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./stylesheet_index.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="main">
+      <div
+        class="img start-image"
+        style="background-image: url('./img/start.jpg');"
+      >
+        <a href="./index.html" class="nag font_1 font_size_nag ">Car Factory</a>
+      </div>
+      <div class="middle-bar">
+        <div
+          class="img overlay_up nag_middle font_1 font_size_middle"
+          style="background-image: url('./img/buy.jpg');"
+        >
+          <a href="./brands.html" class="middle_link"
+            >CREATE</a
+          >
+        </div>
+
+        <div
+          class="rent img overlay_up nag_middle font_1 font_size_middle"
+          style="background-image: url('./img/rent.jpg');"
+        >
+          <a href="./rent.html" class="middle_link"
+            >RENT</a
+          >
+        </div>
+        <div
+          class="img overlay_up nag_middle font_1 font_size_middle"
+          style="background-image: url('./img/here.jpg');"
+        >
+          <a href="./here.html" class="middle_link"
+            >HERE</a>
+        </div>
+      </div>
+      <div id="car-list-container">
+        <div
+          v-for="car in cars "
+          class="car-list-item"
+        >
+          <div class="overlay_down">
+            <div class="carImageCover" :style="'background-image:url(' + car.image +')'"></div>
+            <!-- <img class="list-img " :src="car.image" /> -->
+            <a class="button edit font_1" :href="'customise.html?id=' + car.id">EDIT</a>
+            <a class="button delete font_1" href="#" :data-id="car.id">DELETE</a>
+          </div>
+          <div class="paragraph font_1">
+            {{ car.brand }}
+            {{ car.model }}  
+            &nbsp;
+          </div>
+        </div>
+      </div>
+      <div class="footer"></div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

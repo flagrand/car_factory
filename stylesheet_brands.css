@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css?family=Anton&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+background-image: url('./img/wall.jpg');
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.font_1 {
+    color: white;
+  position: static;
+  font-family: "Anton", sans-serif;
+  font-size: 120px;
+  text-align: center;
+  margin-top: 20px;
+}
+.main {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-row: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-column: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "head    head   head       head"
+    "audi    bmw    mercedes   ford"
+    "audi    bmw    mercedes   ford"
+    "seat    skoda  fiat       opel"
+    "seat    skoda  fiat       opel"
+    "jaguar  mazda  chevrolet  nissan"
+    "jaguar  mazda  chevrolet  nissan"
+    "1fr 1fr 1fr 1fr";
+}
+.item {
+  border: 2px solid white;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.headder {
+  grid-area: head;
+}
+.audi {
+  grid-area: audi;
+}
+.seat {
+  grid-area: seat;
+}
+.skoda {
+  grid-area: skoda;
+}
+.fiat {
+  grid-area: fiat;
+}
+.opel {
+  grid-area: opel;
+}
+.ford {
+  grid-area: ford;
+}
+.mercedes {
+  grid-area: mercedes;
+}
+.jaguar {
+  grid-area: jaguar;
+}
+.mazda {
+  grid-area: mazda;
+}
+.chevrolet {
+  grid-area: chevrolet;
+}
+.bmw {
+  grid-area: bmw;
+}
+.nissan {
+  grid-area: nissan;
+}
+.item {
+    position: relative;
+}
+.item > a {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+}
+.overlay_down {
+  position: relative;
+  overflow: hidden;
+}
+.overlay_down:after {
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: bottom center;
+  background: rgb(177, 115, 0);
+  filter: opacity(0.5);
+  transition: transform 0.3s;
+}
+.overlay_down:hover::after {
+  transform: scaleY(1);
+}
+
+.overlay_up {
+  position: relative;
+  overflow: hidden;
+}
+.overlay_up:after {
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: top center;
+  background: rgb(177, 115, 0);
+  filter: opacity(0.5);
+  transition: transform 0.3s;
+}
+.overlay_up:hover::after {
+  transform: scaleY(1);
+}
+
+.overlay_center {
+  position: relative;
+  overflow: hidden;
+}
+.overlay_center:after {
+  left: 0;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0);
+  transform-origin: center;
+  background: rgb(177, 115, 0);
+  filter: opacity(0.5);
+  transition: transform 0.3s;
+}
+.overlay_center:hover::after {
+  transform: scaleY(1);
+}
